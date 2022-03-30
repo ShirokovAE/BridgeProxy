@@ -1,0 +1,10 @@
+[
+  {
+    "ListenAddress": "127.0.0.1:6312",
+    "RedirectAddress": "127.0.0.1:6313"
+  },
+  {
+    "ListenAddress": "127.0.0.1:6313",
+    "MirrorMode": true
+  }
+]

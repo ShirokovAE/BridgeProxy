@@ -1,0 +1,56 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ListenAddress": {
+        "type": "string",
+        "description": "Конечная точка прослушивания"
+      },
+      "AdditionalListenAddress": {
+        "type": "string"
+      },
+      "AdditionalListenAddressReuse": {
+        "type": "string"
+      },
+      "RedirectAddress": {
+        "type": "string",
+        "description": "Конечная точка перенаправления"
+      },
+      "ConnectAddress": {
+        "type": "string"
+      },
+      "TwoWayConnectListenAddress": {
+        "type": "string"
+      },
+      "AdditionalAddresses": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Дополнительные конечные точки для перенаправления. В них будет осуществляться пересылка данных только в одну сторону."
+      },
+      "AdditionalConnectTryCount": {
+        "type": "integer",
+        "default": 1,
+        "minimum": 1,
+        "description": "(Не используется) Количетсво попыток подключения к дополнительной конечной точке"
+      },
+      "MirrorMode": {
+        "type": "boolean",
+        "description": "Режим зеркала. В этом режиме полученные данные будут пересылаться обратно.",
+        "default": false
+      },
+      "LogMode": {
+        "type": "boolean",
+        "description": "Режим логирования. Полученные данные будут сохранятся в файл",
+        "default": false
+      },
+      "LogFileNameFormat": {
+        "type": "string",
+        "description": "Формат имени файла для логирования. Параметры: 0 - дата создания подключения, 1 - информация о подключении",
+        "default": "{0:yyyy_MM_dd_HH_mm}_{1}.log.bin"
+      }
+    }
+  }
+}
